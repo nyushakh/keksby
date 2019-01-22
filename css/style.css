@@ -464,7 +464,18 @@ body {
     padding-bottom: 70px;
 }
 
+.feedback .container {
+    position: relative;   
+}
+
+.feedback .section-title {
+    max-width: 500px;   
+}
 .feedback-tip {
+    position: absolute;
+    top: 0;
+    right:0;
+    max-width: 500px;
     font-size: 16px;
 }
 
@@ -477,10 +488,22 @@ body {
 }
 
 .feedback-form-group {
-    padding: 10px 0;
+    margin-bottom: 15px;
+
 }
+.feedback-form-group-right-part{
+    width: 290px;
+    float: right;
+ }
+ .feedback-form-group-left-part{
+     width: 290px;
+     float:left;
+ }
 
 .feedback-form-group label {
+    display: inline-block;
+    padding: 5px 0;
+    padding-left: 17px;
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -488,6 +511,10 @@ body {
 .feedback-form input[type="text"],
 .feedback-form select,
 .feedback-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 54px;
+    padding: 9px 15px;
     font: inherit;
     color: inherit;
     border: 2px solid #d5d5d5;
@@ -505,8 +532,33 @@ body {
     border-color: #8d745a;
 }
 
+.feedback-form textarea {
+    display: block;
+    min-height: 120px;
+}
+.feedback-form .btn {
+    margin-top: 40px;
+    background: #a38b70;
+    color: #fff;
+}
+.feedback-form .btn:hover {
+    background-color: #8d745a;
+}
+.feedback-form .btn:active {
+    color:rgba(255, 255, 255, 0.3);
+}
+
 .checkbox-area {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 17px;
     border-bottom: 1px solid #d5d5d5;
+}
+
+.checkbox-area input[type="checkbox"] {
+    margin: 0;
+    margin-right: 5px;
 }
 
 .page-footer {
@@ -541,6 +593,8 @@ body {
 }
 
 .footer-menu h3 {
+    margin: 0;
+    margin-bottom: 20px;
     font-weight: bold;
     font-size: 24px;
     font-family: "Georgia", serif;
@@ -548,7 +602,12 @@ body {
 }
 
 .footer-menu ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+.footer-menu li {
+    margin-bottom: 15px;
 }
 
 .footer-menu a {
@@ -572,19 +631,55 @@ body {
 .footer-social {
     float: left;
     width: 490px;
+    font-size: 0;
 }
 
 .footer-social b {
+    margin-right: 40px;
     font-size: 24px;
     font-family: "Georgia", serif;
     color: #a38b70;
 }
 
 .social-btn {
-    color: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    background: url("/img/sprite.png") no-repeat;
+}
+.social-btn:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.social-btn:active {
+    border-color: #fff;
+    opacity: 0.1;
+}
+.social-btn-vk {
+    background-position: 16px -238px;  
+}
+.social-btn-fb {
+    background-position: 19px -297px;  
+}
+.social-btn-in {
+    background-position: 13px -358px;  
 }
 
+.footer-copyright .heart {
+    display: inline-block;
+    width: 27px;
+    height: 24px;
+    font-size: 0;
+    vertical-align: middle;
+    background-image: url("/img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -5px -419px;
+}
 .footer-copyright {
+    margin-top: 17px;
     float: right;
     width: 236px;
     color: #ffffff;
